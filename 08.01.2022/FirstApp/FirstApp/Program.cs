@@ -34,7 +34,7 @@ namespace FirstApp
 
             Console.WriteLine($"Adı : {name} \nSoyadı : {lastName} \nYaşı : {age} \nMemleketi : {city}");
 
-            byte byt = byte.MaxValue;
+            byte byt = byte.MinValue;
             Console.WriteLine(byt);
 
             Console.ReadLine();
