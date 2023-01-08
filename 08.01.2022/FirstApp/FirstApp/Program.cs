@@ -6,19 +6,29 @@ namespace FirstApp
     {
         static void Main(string[] args)
         {
-            bool a = false;
-            byte a1 = new byte();
-            char a2 = new char();
-            decimal a3 = new decimal();
-            double a4 = new double();
-            float a5 = new float();
-            Console.WriteLine(a);
-            Console.WriteLine(a1);
-            Console.WriteLine(a2);
-            Console.WriteLine(a3);
-            Console.WriteLine(a4);
-            Console.WriteLine(a5);
+            string s1 = "5";
+            string s2 = "6";
+            Console.WriteLine(s1 + s2);
 
+            string s = new string('a', 4);
+            Console.WriteLine(s);
+            object o = 5.5d;
+            Console.WriteLine(o.GetType());
+            o = "Kamil";
+            Console.WriteLine(o.GetType());
+            Console.WriteLine($"string değer : {s} ve string type : {s.GetType()} - " +
+                              $"object değeri : {o} ve object type : {o.GetType()}".GetType());          
+
+            string f = "zeynep ";
+            string g = "ÖZTÜRK";
+            Console.WriteLine("{0} {1}",f,g);
+            Console.WriteLine($"{f} {g}");
+
+            int x =5;
+            int y =6;
+            Console.WriteLine(" x + y "+ ( x+y));
+
+            //  sayfa 78
             Console.ReadLine();
         }
     }
