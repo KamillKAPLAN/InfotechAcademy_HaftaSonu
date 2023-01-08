@@ -1,0 +1,13 @@
+1. başla
+2. hazırlan, çık
+3. yol
+4. salona git
+5. spora başladım mı
+5.1 (E) makine çalışıyor mu
+5.1.1 (E) makineyi kullan (7. adıma dönecek)
+5.2 (H) başlamadım. (5. adıma dönecek)
+5.1.2 (H) başka makineye geç
+6. Spor yap
+7. bitir
+
+
