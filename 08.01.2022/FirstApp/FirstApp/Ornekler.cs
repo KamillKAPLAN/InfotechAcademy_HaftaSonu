@@ -141,5 +141,233 @@ namespace FirstApp
             Console.WriteLine($"fValue : {fValue} fType = {fValue.GetType()}");
             Console.WriteLine(Convert.ToSingle(c));
         }
+
+        public void orn5()
+        {
+            Console.Write("1. Sayıyı giriniz : ");
+            string sayi1 = Console.ReadLine();
+            Console.Write("2. Sayıyı giriniz : ");
+            string sayi2 = Console.ReadLine();
+            //Console.WriteLine("1. Sayı : " + sayi1 + " 2. Sayı : " + sayi2);
+            Console.WriteLine($"1. Sayı Value : {sayi1} 2. Sayı Value : {sayi2}");
+            Console.WriteLine($"1. Sayı Type : {sayi1.GetType()} 2. Sayı Type : {sayi2.GetType()}");
+            int toplam = 0;
+            if (Convert.ToInt32(sayi1) > Convert.ToInt32(sayi2))
+            {
+                toplam = Convert.ToInt32(sayi1) + Convert.ToInt32(sayi2);
+            }
+            else if (Convert.ToInt32(sayi1) == Convert.ToInt32(sayi2))
+            {
+                toplam = (2 * (Convert.ToInt32(sayi1) + Convert.ToInt32(sayi2)));
+            }
+            else
+            {
+                toplam = ((Convert.ToInt32(sayi1) + Convert.ToInt32(sayi2)) - 5);
+            }
+            Console.WriteLine($"1. Sayı : {sayi1} + 2. Sayı : {sayi2} = {toplam}");
+            Console.ReadLine();
+        }
+
+        public void orn6()
+        {
+            Console.Write("1. Değeri giriniz : ");
+            string deger1 = Console.ReadLine();
+            Console.Write("2. Değeri giriniz : ");
+            string deger2 = Console.ReadLine();
+            Console.Write("3. Değeri giriniz : ");
+            string deger3 = Console.ReadLine();
+            Console.Write("İşlem operatörünü (+,-,*,/) giriniz : ");
+            string operat = Console.ReadLine();
+            // Console.WriteLine($"Kullanıcıdan alınan değerler : {deger1} - {deger2} - {deger3} - {operat} alındı.");
+
+            // Console.WriteLine($"Alınan değer toplamı : {deger1 + deger2 + deger3}");
+
+            int s1, s2, s3, sonuc = 0;
+            s1 = Int32.Parse(deger1);
+            s2 = Convert.ToInt32(deger2);
+            s3 = Int32.Parse(deger3);
+
+            // Console.WriteLine($"Int deger toplamı : {s1 + s2 + s3}");
+
+            if (operat == "+")
+            {
+                sonuc = (s1 + s2 + s3);
+            }
+            else if (operat == "-")
+            {
+                sonuc = (s1 - s2 - s3);
+            }
+            else if (operat == "*")
+            {
+                sonuc = (s1 * s2 * s3);
+            }
+            else if (operat == "/")
+            {
+                if (s2 == 0 || s3 == 0)
+                {
+                    Console.WriteLine("2. veya 3. sayı 0 'dan farklı olmalıdır.");
+                }
+                else
+                {
+                    sonuc = (s1 / s2 / s3);
+                }
+            }
+            else
+            {
+                /* +,-,*,/  ++ */
+                Console.WriteLine("Tanımsız operatör");
+            }
+
+            /* 0 -10 arasında ise */
+            if (sonuc > 0 && sonuc <= 10)
+            {
+                Console.WriteLine("FF");
+            }
+            else if (sonuc >= 11 && sonuc <= 20)
+            {
+                Console.WriteLine("DD");
+            }
+            else if (sonuc >= 21 && sonuc <= 30)
+            {
+                Console.WriteLine("CC");
+            }
+            else if (sonuc >= 31 && sonuc <= 40)
+            {
+                Console.WriteLine("CB");
+            }
+            else if (sonuc >= 41 && sonuc <= 50)
+            {
+                Console.WriteLine("BB");
+            }
+            else if (sonuc >= 51 && sonuc <= 70)
+            {
+                Console.WriteLine("BA");
+            }
+            else if (sonuc >= 71 && sonuc <= 100)
+            {
+                Console.WriteLine("AA");
+            }
+            else
+            {
+                Console.WriteLine("Harf notunuz tanımsız");
+            }
+        }
+
+        public void orn6_1()
+        {
+            /*
+              Dışarıdan 3 tane sayı al, ve bu sayıları +,-,/,* operatörlerine 
+              göre işlemleri yaptır. çıkan sonuç 
+               70-100 arasında ise : AA
+               50-70 arasında ise : BA 
+               40-50 arasında ise : BB
+               30-40 arasında ise : CB
+               20-30 arasında ise : CC
+               10-20 arasında ise : DD
+               0-10 arasında ise : FF yazacak algoritmayı kurunuz.
+            */
+            int s1, s2, s3, sonuc = 0;
+            Console.Write("1. Değeri giriniz : ");
+            s1 = Int32.Parse(Console.ReadLine());
+
+            Console.Write("2. Değeri giriniz : ");
+            s2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("3. Değeri giriniz : ");
+            s3 = Int32.Parse(Console.ReadLine());
+
+            Console.Write("İşlem operatörünü (+,-,*,/) giriniz : ");
+            string operat = Console.ReadLine();
+
+            if (operat == "+")
+                sonuc = (s1 + s2 + s3);
+            else if (operat == "-")
+                sonuc = (s1 - s2 - s3);
+            else if (operat == "*")
+                sonuc = (s1 * s2 * s3);
+            else if (operat == "/")
+            {
+                if (s2 == 0 || s3 == 0)
+                    Console.WriteLine("2. veya 3. sayı 0 'dan farklı olmalıdır.");
+                else
+                    sonuc = (s1 / s2 / s3);
+            }
+            else
+                Console.WriteLine("Tanımsız operatör");
+
+            if (sonuc > 0 && sonuc <= 10)
+                Console.WriteLine("FF");
+            else if (sonuc >= 11 && sonuc <= 20)
+                Console.WriteLine("DD");
+            else if (sonuc >= 21 && sonuc <= 30)
+                Console.WriteLine("CC");
+            else if (sonuc >= 31 && sonuc <= 40)
+                Console.WriteLine("CB");
+            else if (sonuc >= 41 && sonuc <= 50)
+                Console.WriteLine("BB");
+            else if (sonuc >= 51 && sonuc <= 70)
+                Console.WriteLine("BA");
+            else if (sonuc >= 71 && sonuc <= 100)
+                Console.WriteLine("AA");
+            else
+                Console.WriteLine("Harf notunuz tanımsız");
+        }
+
+        public void orn7()
+        {
+            int s1, s2;
+            string sonuc;
+            Console.Write("1. Değeri giriniz : ");
+            s1 = Int32.Parse(Console.ReadLine());
+
+            Console.Write("2. Değeri giriniz : ");
+            s2 = Convert.ToInt32(Console.ReadLine());
+
+            if (s1 > s2)
+                Console.WriteLine($"{s1} büyük {s2}");
+            else if (s1 == s2)
+                Console.WriteLine($"{s1} eşittir {s2}");
+            else
+                Console.WriteLine($"{s1} küçük {s2}");
+
+            sonuc = (s1 > s2) ? $"{s1} büyük {s2}" : $"{s1} küçük {s2} ";
+            Console.WriteLine($"Sonuç : {sonuc}");
+
+            int x = 10, y = 100;
+
+            string result = x > y ? "x büyük y" :
+                                x < y ? "x küçük y" :
+                                    x == y ? "x eşit y" : "";
+            Console.WriteLine(result);
+
+            int? snc = s1 > s2 ? 2 : s1 < s2 ? 1 : s1 == s2 ? 0 : null;
+        }
+
+        public void sinifListesi()
+        {
+            Console.WriteLine("Kamil");
+            Console.WriteLine("Ahunaz");
+            Console.WriteLine("Zeynep");
+            Console.WriteLine("Çizdem");
+            Console.WriteLine("Yunus");
+            Console.WriteLine("Elif");
+            Console.WriteLine("Caner");
+            Console.WriteLine("Oğuz");
+            Console.WriteLine("Ertan");
+            Console.WriteLine("Abdulbaki");
+        }
+
+        public void orn8()
+        {
+            int a = 8, b, c;
+            Console.WriteLine($"a ilk deger : {a}");  // 8
+            b = ++a;
+            c = a--;
+            Console.WriteLine($"b deger : {b}");      // 9 9 
+            Console.WriteLine($"c deger : {c}");      // 9 7 
+            Console.WriteLine($"a son deger : {a}");  // 8 7 
+
+            // 11. sayfa
+        }
     }
 }
